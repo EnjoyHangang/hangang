@@ -1,6 +1,6 @@
 const Sequelize = require("sequelize");
 
-module.exports = class Comment extends Sequelize.Model {
+module.exports = class Temp extends Sequelize.Model {
   static init(sequelize) {
     return super.init(
       {
@@ -23,13 +23,13 @@ module.exports = class Comment extends Sequelize.Model {
     );
   }
 
-  static associate(db) {
-    db.Comment.belongsTo(db.User, {
-      foreignKey: {
-        name: "userId",
-        onDelete: "SET NULL",
-        as: "User",
-      },
-    });
-  }
+  //   static associate(db) {
+  //     db.Comment.belongsTo(db.User, {
+  //       foreignKey: {
+  //         name: "userId",
+  //         onDelete: "SET NULL",
+  //         as: "User",
+  //       },
+  //     });
+  //   }
 };
