@@ -38,10 +38,6 @@ models.sequelize
     logger.error('DB Connection fail', err);
   });
 
-app.get('/', (req, res) => {
-  res.render('index', { name: 'Hangang' });
-});
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
@@ -63,7 +59,7 @@ app.use(function (err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  res.render('error', { err: err.status });
 });
 
 module.exports = app;
