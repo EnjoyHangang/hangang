@@ -21,7 +21,7 @@ module.exports = class Temp extends Sequelize.Model {
   }
 
   static associate(db) {
-    db.Comment.belongsTo(db.User, {
+    db.Temp.belongsTo(db.User, {
       foreignKey: {
         name: "userId",
         onDelete: "SET NULL",
