@@ -1,5 +1,3 @@
-// 수정 필요
-
 const { Op } = require("sequelize");
 const { User, Temp } = require("../models/index");
 
