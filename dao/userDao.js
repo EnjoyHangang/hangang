@@ -1,11 +1,49 @@
-const { User } = require("../models/index");
+const { Op } = require('sequelize');
+const { User } = require('../models/index');
 
 const dao = {
+  // 등록
   insert(params) {
     return new Promise((resolve, reject) => {
-      User.create(params) //.create = Sequelize ORM메서드(User테이블을 사용)
+      User.create(params)
         .then((inserted) => {
-          resolve(inserted); //성공시 inserted라는 레코드생성 생성
+          // password는 제외하고 리턴함
+          const insertedResult = { ...inserted };
+          delete insertedResult.dataValues.password;
+          resolve(inserted);
+        })
+        .catch((err) => {
+          reject(err);
+        });
+    });
+  },
+  // 리스트 조회
+  selectList(params) {
+    // where 검색 조건
+    const setQuery = {};
+    if (params.name) {
+      setQuery.where = {
+        ...setQuery.where,
+        name: { [Op.like]: `%${params.name}%` }, // like검색
+      };
+    }
+    if (params.userid) {
+      setQuery.where = {
+        ...setQuery.where,
+        userid: params.userid, // '='검색
+      };
+    }
+
+    // order by 정렬 조건
+    setQuery.order = [['id', 'DESC']];
+
+    return new Promise((resolve, reject) => {
+      User.findAndCountAll({
+        ...setQuery,
+        attributes: { exclude: ['password'] }, // password 필드 제외
+      })
+        .then((selectedList) => {
+          resolve(selectedList);
         })
         .catch((err) => {
           reject(err);
@@ -13,28 +51,61 @@ const dao = {
     });
   },
 
-  //user 조회
-  selectList(params) {
-    const SetQuery = {}; // 쿼리 설정(객체)
-    if (params.name) {
-      //등록되어있는 params.name에있다면
-      SetQuery.where = {
-        //(객체형태)로 찾아라
-        ...SetQuery.where,
-        name: { [Op.like]: `%${params.name}%` }, //Op.like: 찾아주는 sequlize 메서드 %문자열을포함하는값과 일치하는것%
-      };
-    }
-
-    SetQuery.order = [["id", "DESC"]];
-    //.order 정렬해라
+  // 상세정보 조회
+  selectInfo(params) {
     return new Promise((resolve, reject) => {
-      User.findAndCountAll({
-        //.findAndCountAll 요소를 검색하고  해당 데이터와 갯수를 반환
-        ...SetQuery,
+      User.findByPk(params.id)
+        .then((selected) => {
+          resolve(selected);
+        })
+        .catch((err) => {
+          reject(err);
+        });
+    });
+  },
+
+  // 로그인용 사용자 검색
+  // 상세정보 조회
+  selectUser(params) {
+    return new Promise((resolve, reject) => {
+      User.findOne({
+        attributes: ['id', 'userid', 'password'],
+        where: {
+          userid: params.userid,
+        },
       })
-        .then((selectedList) => {
-          resolve(selectedList);
-          //성공시 selectedList 반환
+        .then((selected) => {
+          resolve(selected);
+        })
+        .catch((err) => {
+          reject(err);
+        });
+    });
+  },
+
+  // 수정
+  update(params) {
+    return new Promise((resolve, reject) => {
+      User.update(params, {
+        where: { id: params.id },
+      })
+        .then(([updated]) => {
+          resolve({ updatedCount: updated });
+        })
+        .catch((err) => {
+          reject(err);
+        });
+    });
+  },
+
+  // 삭제
+  delete(params) {
+    return new Promise((resolve, reject) => {
+      User.destroy({
+        where: { id: params.id },
+      })
+        .then((deleted) => {
+          resolve({ deletedCount: deleted });
         })
         .catch((err) => {
           reject(err);

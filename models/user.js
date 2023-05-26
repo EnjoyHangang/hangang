@@ -15,7 +15,7 @@ module.exports = class User extends Sequelize.Model {
           allowNull: false, //Null을 허용하는가?
         },
         password: {
-          type: Sequelize.STRING(20),
+          type: Sequelize.TEXT,
           allowNull: false,
         },
       },
@@ -28,9 +28,9 @@ module.exports = class User extends Sequelize.Model {
     );
   }
 
-  static associate(db) {
-    db.User.hasMany(db.Temp, {
-      foreignKey: { name: 'userId', onDelete: 'SET NULL', as: 'Temp' },
-    });
-  }
+  // static associate(db) {
+  //   db.User.hasMany(db.Temp, {
+  //     foreignKey: { name: 'userId', onDelete: 'SET NULL', as: 'Temp' },
+  //   });
+  // }
 };
