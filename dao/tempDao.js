@@ -4,36 +4,18 @@ const { Op } = require("sequelize");
 const { User, Temp } = require("../models/index");
 
 const dao = {
-  insert(params) {
-    return new Promise((resolve, reject) => {
-      Temp.create(params)
-        .then((inserted) => {
-          resolve(inserted);
-        })
-        .catch((err) => {
-          reject(err);
-        });
-    });
+  async insert(params) {
+    try {
+      const inserted = await Temp.create(params);
+      return inserted;
+    } catch (err) {
+      throw err;
+    }
   },
-  selectList(params) {
-    // where 검색 조건
-    const setQuery = {};
-    if (params.userId) {
-      setQuery.where = {
-        ...setQuery.where,
-        userId: params.userId,
-      };
-    }
-    if (params.time) {
-      setQuery.where = {
-        ...setQuery.where,
-        time: params.time,
-      };
-    }
-    setQuery.order = [["id", "DESC"]];
-    return new Promise((resolve, reject) => {
-      Temp.findAndCountAll({
-        ...setQuery,
+  async selectList(params) {
+    try {
+      const query = {
+        order: [["id", "DESC"]],
         include: [
           {
             model: User,
@@ -41,36 +23,36 @@ const dao = {
             attributes: ["userId"],
           },
         ],
-      })
-        .then((selectedList) => {
-          resolve(selectedList);
-        })
-        .catch((err) => {
-          reject(err);
-        });
-    });
+      };
+      if (params.userId) {
+        query.where = { userId: params.userId };
+      }
+      if (params.time) {
+        query.where = { ...query.where, time: params.time };
+      }
+      const selectedList = await Temp.findAndCountAll(query);
+      return selectedList;
+    } catch (err) {
+      throw err;
+    }
   },
-  selectInfo(params) {
-    return new Promise((resolve, reject) => {
-      Temp.findByPk(params.id, {
+  async selectInfo(params) {
+    try {
+      const selectedInfo = await Temp.findByPk(params.id, {
         include: [
           {
             model: User,
             as: "User",
           },
         ],
-      })
-        .then((selectedInfo) => {
-          if (!selectedInfo) {
-            resolve(null);
-          } else {
-            resolve(selectedInfo);
-          }
-        })
-        .catch((err) => {
-          reject(err);
-        });
-    });
+      });
+      if (!selectedInfo) {
+        return null;
+      }
+      return selectedInfo;
+    } catch (err) {
+      throw err;
+    }
   },
 };
 
