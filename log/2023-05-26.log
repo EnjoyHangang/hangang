@@ -1,0 +1,84 @@
+2023-05-26 10:22:25.374[info] app start
+2023-05-26 10:22:25.440[info] DB connection success
+2023-05-26 10:22:25.441[info] Sequelize sync success
+2023-05-26 10:22:32.591[info] app start
+2023-05-26 10:22:32.634[info] DB connection success
+2023-05-26 10:22:32.635[info] Sequelize sync success
+2023-05-26 10:24:50.533[info] app start
+2023-05-26 10:24:50.587[info] DB connection success
+2023-05-26 10:24:50.589[info] Sequelize sync success
+2023-05-26 10:25:08.599[info] app start
+2023-05-26 10:25:08.661[info] DB connection success
+2023-05-26 10:25:08.662[info] Sequelize sync success
+2023-05-26 10:25:45.878[info] app start
+2023-05-26 10:25:45.931[info] DB connection success
+2023-05-26 10:25:45.932[info] Sequelize sync success
+2023-05-26 10:26:37.365[info] app start
+2023-05-26 10:26:37.420[info] DB connection success
+2023-05-26 10:26:37.421[info] Sequelize sync success
+2023-05-26 10:27:14.938[info] app start
+2023-05-26 10:27:14.994[info] DB connection success
+2023-05-26 10:27:14.996[info] Sequelize sync success
+2023-05-26 10:29:31.366[info] app start
+2023-05-26 10:29:31.422[info] DB connection success
+2023-05-26 10:29:31.424[info] Sequelize sync success
+2023-05-26 10:29:39.014[info] app start
+2023-05-26 10:29:39.055[info] DB connection success
+2023-05-26 10:29:39.056[info] Sequelize sync success
+2023-05-26 10:30:48.767[info] app start
+2023-05-26 10:30:48.822[info] DB connection success
+2023-05-26 10:30:48.824[info] Sequelize sync success
+2023-05-26 10:31:29.443[info] app start
+2023-05-26 10:31:29.484[info] DB connection success
+2023-05-26 10:31:29.485[info] Sequelize sync success
+2023-05-26 10:32:23.936[info] app start
+2023-05-26 10:32:23.995[info] DB connection success
+2023-05-26 10:32:23.996[info] Sequelize sync success
+2023-05-26 10:35:22.461[info] app start
+2023-05-26 10:35:22.521[info] DB connection success
+2023-05-26 10:35:22.522[info] Sequelize sync success
+2023-05-26 10:35:39.495[info] app start
+2023-05-26 10:35:39.537[info] DB connection success
+2023-05-26 10:35:39.539[info] Sequelize sync success
+2023-05-26 10:36:05.789[info] app start
+2023-05-26 10:36:05.831[info] DB connection success
+2023-05-26 10:36:05.832[info] Sequelize sync success
+2023-05-26 10:36:18.977[info] app start
+2023-05-26 10:36:19.030[info] DB connection success
+2023-05-26 10:36:19.033[info] Sequelize sync success
+2023-05-26 10:36:40.857[info] app start
+2023-05-26 10:36:40.914[info] DB connection success
+2023-05-26 10:36:40.915[info] Sequelize sync success
+2023-05-26 10:36:47.389[info] app start
+2023-05-26 10:36:47.429[info] DB connection success
+2023-05-26 10:36:47.430[info] Sequelize sync success
+2023-05-26 10:36:49.576[info] (weather.get.result) [{"MSR_DATE":"20230526","MSR_TIME":"10:00","SITE_ID":"탄천","W_TEMP":"21.8","W_PH":"7.0","W_DO":"9.4","W_TN":"3.880","W_TP":"0.100","W_TOC":"3.7","W_PHEN":"0.000","W_CN":"0.000"},{"MSR_DATE":"20230526","MSR_TIME":"10:00","SITE_ID":"중랑천","W_TEMP":"22.2","W_PH":"7.1","W_DO":"8.7","W_TN":"5.975","W_TP":"0.105","W_TOC":"점검중","W_PHEN":"0.000","W_CN":"0.000"},{"MSR_DATE":"20230526","MSR_TIME":"10:00","SITE_ID":"안양천","W_TEMP":"21.6","W_PH":"7.2","W_DO":"8.7","W_TN":"5.770","W_TP":"0.080","W_TOC":"4.9","W_PHEN":"0.000","W_CN":"0.000"},{"MSR_DATE":"20230526","MSR_TIME":"10:00","SITE_ID":"선유","W_TEMP":"21.8","W_PH":"7.0","W_DO":"5.3","W_TN":"3.380","W_TP":"0.058","W_TOC":"3.0","W_PHEN":"0.000","W_CN":"0.000"},{"MSR_DATE":"20230526","MSR_TIME":"10:00","SITE_ID":"노량진","W_TEMP":"21.4","W_PH":"7.0","W_DO":"6.6","W_TN":"3.100","W_TP":"0.060","W_TOC":"2.3","W_PHEN":"0.000","W_CN":"0.000"}]
+2023-05-26 11:05:32.032[info] app start
+2023-05-26 11:05:32.091[info] DB connection success
+2023-05-26 11:05:32.092[info] Sequelize sync success
+2023-05-26 11:05:56.085[info] app start
+2023-05-26 11:05:56.143[info] DB connection success
+2023-05-26 11:05:56.145[info] Sequelize sync success
+2023-05-26 11:19:18.290[info] app start
+2023-05-26 11:19:18.350[info] DB connection success
+2023-05-26 11:19:18.352[info] Sequelize sync success
+2023-05-26 11:22:06.952[info] app start
+2023-05-26 11:22:07.011[info] DB connection success
+2023-05-26 11:22:07.013[info] Sequelize sync success
+2023-05-26 11:22:13.843[info] app start
+2023-05-26 11:22:13.885[info] DB connection success
+2023-05-26 11:22:13.886[info] Sequelize sync success
+2023-05-26 11:23:27.915[info] app start
+2023-05-26 11:23:27.971[info] DB connection success
+2023-05-26 11:23:27.973[info] Sequelize sync success
+2023-05-26 11:23:31.774[info] app start
+2023-05-26 11:23:31.816[info] DB connection success
+2023-05-26 11:23:31.817[info] Sequelize sync success
+2023-05-26 11:23:33.569[info] (weather.get.result) {"탄천":[{"MSR_DATE":"20230526","MSR_TIME":"11:00","SITE_ID":"탄천","W_TEMP":"22.6","W_PH":"7.1","W_DO":"9.8","W_TN":"3.720","W_TP":"0.095","W_TOC":"4.5","W_PHEN":"0.000","W_CN":"0.000"}],"중랑천":[{"MSR_DATE":"20230526","MSR_TIME":"11:00","SITE_ID":"중랑천","W_TEMP":"22.5","W_PH":"7.1","W_DO":"8.8","W_TN":"5.900","W_TP":"0.105","W_TOC":"점검중","W_PHEN":"0.000","W_CN":"0.000"}],"안양천":[{"MSR_DATE":"20230526","MSR_TIME":"11:00","SITE_ID":"안양천","W_TEMP":"22.7","W_PH":"7.3","W_DO":"9.3","W_TN":"4.150","W_TP":"0.085","W_TOC":"5.1","W_PHEN":"0.000","W_CN":"0.000"}],"선유":[{"MSR_DATE":"20230526","MSR_TIME":"11:00","SITE_ID":"선유","W_TEMP":"21.9","W_PH":"7.0","W_DO":"5.4","W_TN":"3.380","W_TP":"0.063","W_TOC":"3.0","W_PHEN":"0.000","W_CN":"0.000"}],"노량진":[{"MSR_DATE":"20230526","MSR_TIME":"11:00","SITE_ID":"노량진","W_TEMP":"21.6","W_PH":"7.0","W_DO":"6.6","W_TN":"3.200","W_TP":"0.056","W_TOC":"2.4","W_PHEN":"0.000","W_CN":"0.000"}]}
+2023-05-26 11:25:05.251[info] app start
+2023-05-26 11:25:05.294[info] DB connection success
+2023-05-26 11:25:05.295[info] Sequelize sync success
+2023-05-26 11:25:07.523[info] (weather.get.result) [{"MSR_DATE":"20230526","MSR_TIME":"11:00","SITE_ID":"탄천","W_TEMP":"22.6","W_PH":"7.1","W_DO":"9.8","W_TN":"3.720","W_TP":"0.095","W_TOC":"4.5","W_PHEN":"0.000","W_CN":"0.000"},{"MSR_DATE":"20230526","MSR_TIME":"11:00","SITE_ID":"중랑천","W_TEMP":"22.5","W_PH":"7.1","W_DO":"8.8","W_TN":"5.900","W_TP":"0.105","W_TOC":"점검중","W_PHEN":"0.000","W_CN":"0.000"},{"MSR_DATE":"20230526","MSR_TIME":"11:00","SITE_ID":"안양천","W_TEMP":"22.7","W_PH":"7.3","W_DO":"9.3","W_TN":"4.150","W_TP":"0.085","W_TOC":"5.1","W_PHEN":"0.000","W_CN":"0.000"},{"MSR_DATE":"20230526","MSR_TIME":"11:00","SITE_ID":"선유","W_TEMP":"21.9","W_PH":"7.0","W_DO":"5.4","W_TN":"3.380","W_TP":"0.063","W_TOC":"3.0","W_PHEN":"0.000","W_CN":"0.000"},{"MSR_DATE":"20230526","MSR_TIME":"11:00","SITE_ID":"노량진","W_TEMP":"21.6","W_PH":"7.0","W_DO":"6.6","W_TN":"3.200","W_TP":"0.056","W_TOC":"2.4","W_PHEN":"0.000","W_CN":"0.000"}]
+2023-05-26 11:27:05.115[info] app start
+2023-05-26 11:27:05.171[info] DB connection success
+2023-05-26 11:27:05.172[info] Sequelize sync success
