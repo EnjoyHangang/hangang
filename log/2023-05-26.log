@@ -1,0 +1,80 @@
+2023-05-26 09:23:18.829[info] 시작!
+2023-05-26 09:23:18.964[info] DB 연결 성공!
+2023-05-26 09:23:18.983[info] sequelize 동기화 성공!
+2023-05-26 09:23:24.098[info] (user.req.params){"name":"gusdn","userid":"Woo","password":"a123"}
+2023-05-26 09:23:24.118[error] (userService.reg)SequelizeUniqueConstraintError: Validation error
+2023-05-26 09:23:24.121[info] (department.reg.result) {"name":"SequelizeUniqueConstraintError","errors":[{"message":"userid must be unique","type":"unique violation","path":"userid","value":"Woo","origin":"DB","instance":{"id":null,"name":"gusdn","userid":"Woo","password":"a123","updatedAt":"2023-05-26T00:23:24.103Z","createdAt":"2023-05-26T00:23:24.103Z"},"validatorKey":"not_unique","validatorName":null,"validatorArgs":[]}],"parent":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'Woo' for key 'users.userid'","sql":"INSERT INTO `users` (`id`,`name`,`userid`,`password`,`created_at`,`updated_at`) VALUES (DEFAULT,?,?,?,?,?);","parameters":["gusdn","Woo","a123","2023-05-26 00:23:24","2023-05-26 00:23:24"]},"original":{"code":"ER_DUP_ENTRY","errno":1062,"sqlState":"23000","sqlMessage":"Duplicate entry 'Woo' for key 'users.userid'","sql":"INSERT INTO `users` (`id`,`name`,`userid`,`password`,`created_at`,`updated_at`) VALUES (DEFAULT,?,?,?,?,?);","parameters":["gusdn","Woo","a123","2023-05-26 00:23:24","2023-05-26 00:23:24"]},"fields":{"userid":"Woo"},"sql":"INSERT INTO `users` (`id`,`name`,`userid`,`password`,`created_at`,`updated_at`) VALUES (DEFAULT,?,?,?,?,?);"}
+2023-05-26 09:29:34.284[info] 시작!
+2023-05-26 09:29:34.432[info] DB 연결 성공!
+2023-05-26 09:29:34.454[info] sequelize 동기화 성공!
+2023-05-26 09:32:44.740[info] 시작!
+2023-05-26 09:32:44.879[info] DB 연결 성공!
+2023-05-26 09:32:44.896[info] sequelize 동기화 성공!
+2023-05-26 09:33:56.086[info] 시작!
+2023-05-26 09:33:56.226[info] DB 연결 성공!
+2023-05-26 09:33:56.244[info] sequelize 동기화 성공!
+2023-05-26 09:49:42.382[info] 시작!
+2023-05-26 09:49:42.513[info] DB 연결 성공!
+2023-05-26 09:49:42.531[info] sequelize 동기화 성공!
+2023-05-26 09:49:48.921[info] 시작!
+2023-05-26 09:49:49.052[info] DB 연결 성공!
+2023-05-26 09:49:49.069[info] sequelize 동기화 성공!
+2023-05-26 09:53:25.663[info] 시작!
+2023-05-26 09:53:25.791[info] DB 연결 성공!
+2023-05-26 09:53:25.808[info] sequelize 동기화 성공!
+2023-05-26 09:54:54.431[info] 시작!
+2023-05-26 09:54:54.558[info] DB 연결 성공!
+2023-05-26 09:54:54.576[info] sequelize 동기화 성공!
+2023-05-26 09:57:38.683[info] 시작!
+2023-05-26 09:57:38.860[info] DB 연결 성공!
+2023-05-26 09:57:38.877[info] sequelize 동기화 성공!
+2023-05-26 09:58:07.340[info] 시작!
+2023-05-26 09:58:07.471[info] DB 연결 성공!
+2023-05-26 09:58:07.488[info] sequelize 동기화 성공!
+2023-05-26 10:04:11.189[info] 시작!
+2023-05-26 10:04:11.321[info] DB 연결 성공!
+2023-05-26 10:04:11.338[info] sequelize 동기화 성공!
+2023-05-26 10:04:29.012[info] 시작!
+2023-05-26 10:04:29.146[info] DB 연결 성공!
+2023-05-26 10:04:29.162[info] sequelize 동기화 성공!
+2023-05-26 10:04:45.837[info] 시작!
+2023-05-26 10:04:46.009[info] DB 연결 성공!
+2023-05-26 10:04:46.028[info] sequelize 동기화 성공!
+2023-05-26 10:04:54.759[info] 시작!
+2023-05-26 10:04:54.884[info] DB 연결 성공!
+2023-05-26 10:04:54.899[info] sequelize 동기화 성공!
+2023-05-26 10:08:19.074[info] 시작!
+2023-05-26 10:08:19.204[info] DB 연결 성공!
+2023-05-26 10:08:19.222[info] sequelize 동기화 성공!
+2023-05-26 10:08:23.626[info] 시작!
+2023-05-26 10:08:23.769[info] DB 연결 성공!
+2023-05-26 10:08:23.786[info] sequelize 동기화 성공!
+2023-05-26 10:11:48.982[info] 시작!
+2023-05-26 10:11:49.109[info] DB 연결 성공!
+2023-05-26 10:11:49.128[info] sequelize 동기화 성공!
+2023-05-26 10:12:44.414[info] 시작!
+2023-05-26 10:12:44.541[info] DB 연결 성공!
+2023-05-26 10:12:44.557[info] sequelize 동기화 성공!
+2023-05-26 10:13:15.285[info] 시작!
+2023-05-26 10:13:15.426[info] DB 연결 성공!
+2023-05-26 10:13:15.446[info] sequelize 동기화 성공!
+2023-05-26 10:27:44.897[info] 시작!
+2023-05-26 10:27:45.035[info] DB 연결 성공!
+2023-05-26 10:27:45.052[info] sequelize 동기화 성공!
+2023-05-26 10:34:02.722[info] 시작!
+2023-05-26 10:34:02.853[info] DB 연결 성공!
+2023-05-26 10:34:02.870[info] sequelize 동기화 성공!
+2023-05-26 10:35:37.590[info] (user.list.params) {}
+2023-05-26 10:35:37.622[debug] (userService.list) {"count":1,"rows":[{"id":1,"name":"gusdn","userid":"Woo","password":"a123","createdAt":"2023-05-25T12:40:29.000Z","updatedAt":"2023-05-25T12:40:29.000Z","deletedAt":null}]}
+2023-05-26 10:36:12.476[info] 시작!
+2023-05-26 10:36:12.610[info] DB 연결 성공!
+2023-05-26 10:36:12.628[info] sequelize 동기화 성공!
+2023-05-26 10:36:18.144[info] (user.list.params) {}
+2023-05-26 10:36:18.169[debug] (userService.list) {"count":1,"rows":[{"id":1,"name":"gusdn","userid":"Woo","password":"a123","createdAt":"2023-05-25T12:40:29.000Z","updatedAt":"2023-05-25T12:40:29.000Z","deletedAt":null}]}
+2023-05-26 10:36:18.172[info] (user.list.result) {"count":1,"rows":[{"id":1,"name":"gusdn","userid":"Woo","password":"a123","createdAt":"2023-05-25T12:40:29.000Z","updatedAt":"2023-05-25T12:40:29.000Z","deletedAt":null}]}
+2023-05-26 10:36:34.395[info] (user.list.params) {}
+2023-05-26 10:36:34.413[debug] (userService.list) {"count":1,"rows":[{"id":1,"name":"gusdn","userid":"Woo","password":"a123","createdAt":"2023-05-25T12:40:29.000Z","updatedAt":"2023-05-25T12:40:29.000Z","deletedAt":null}]}
+2023-05-26 10:36:34.416[info] (user.list.result) {"count":1,"rows":[{"id":1,"name":"gusdn","userid":"Woo","password":"a123","createdAt":"2023-05-25T12:40:29.000Z","updatedAt":"2023-05-25T12:40:29.000Z","deletedAt":null}]}
+2023-05-26 10:36:52.072[info] (user.list.params) {}
+2023-05-26 10:36:52.092[debug] (userService.list) {"count":1,"rows":[{"id":1,"name":"gusdn","userid":"Woo","password":"a123","createdAt":"2023-05-25T12:40:29.000Z","updatedAt":"2023-05-25T12:40:29.000Z","deletedAt":null}]}
+2023-05-26 10:36:52.094[info] (user.list.result) {"count":1,"rows":[{"id":1,"name":"gusdn","userid":"Woo","password":"a123","createdAt":"2023-05-25T12:40:29.000Z","updatedAt":"2023-05-25T12:40:29.000Z","deletedAt":null}]}
