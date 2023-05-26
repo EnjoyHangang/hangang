@@ -1,8 +1,12 @@
 const { sequelize } = require('./connection');
+const User = require('./user');
+const Temp = require('./temp');
 
 const db = {};
 
 db.sequelize = sequelize;
+db.User = User;
+db.Temp = Temp;
 
 // model init
 Object.keys(db).forEach((modelName) => {
