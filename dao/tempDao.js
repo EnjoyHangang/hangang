@@ -1,7 +1,7 @@
 // 수정 필요
 
 const { Op } = require("sequelize");
-const { User } = require("../models/index");
+const { User, Temp } = require("../models/index");
 
 const dao = {
   insert(params) {
@@ -18,16 +18,16 @@ const dao = {
   selectList(params) {
     // where 검색 조건
     const setQuery = {};
-    if (params.id) {
-      setQuery.where = {
-        ...setQuery.where,
-        id: { [Op.like]: `%${params.id}%` }, // like검색
-      };
-    }
     if (params.userId) {
       setQuery.where = {
         ...setQuery.where,
-        userId: params.userId, // like검색
+        userId: params.userId,
+      };
+    }
+    if (params.time) {
+      setQuery.where = {
+        ...setQuery.where,
+        time: params.time,
       };
     }
     setQuery.order = [["id", "DESC"]];
@@ -36,9 +36,9 @@ const dao = {
         ...setQuery,
         include: [
           {
-            model: Post,
-            as: "Post",
-            attributes: ["userId", "title"],
+            model: User,
+            as: "User",
+            attributes: ["userId"],
           },
         ],
       })
@@ -52,17 +52,20 @@ const dao = {
   },
   selectInfo(params) {
     return new Promise((resolve, reject) => {
-      // Post.findAll
       Temp.findByPk(params.id, {
         include: [
           {
-            model: Post,
-            as: "Post",
+            model: User,
+            as: "User",
           },
         ],
       })
         .then((selectedInfo) => {
-          resolve(selectedInfo);
+          if (!selectedInfo) {
+            resolve(null);
+          } else {
+            resolve(selectedInfo);
+          }
         })
         .catch((err) => {
           reject(err);
