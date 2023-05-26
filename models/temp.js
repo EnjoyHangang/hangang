@@ -4,9 +4,6 @@ module.exports = class Temp extends Sequelize.Model {
   static init(sequelize) {
     return super.init(
       {
-        userId: {
-          type: Sequelize.INTEGER,
-        },
         temp: {
           type: Sequelize.INTEGER,
         },
@@ -23,13 +20,13 @@ module.exports = class Temp extends Sequelize.Model {
     );
   }
 
-  //   static associate(db) {
-  //     db.Comment.belongsTo(db.User, {
-  //       foreignKey: {
-  //         name: "userId",
-  //         onDelete: "SET NULL",
-  //         as: "User",
-  //       },
-  //     });
-  //   }
+  static associate(db) {
+    db.Comment.belongsTo(db.User, {
+      foreignKey: {
+        name: "userId",
+        onDelete: "SET NULL",
+        as: "User",
+      },
+    });
+  }
 };
