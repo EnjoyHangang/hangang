@@ -1,6 +1,6 @@
 //user db생성
 
-const Sequelize = require("sequelize");
+const Sequelize = require('sequelize');
 
 module.exports = class User extends Sequelize.Model {
   static init(sequelize) {
@@ -26,5 +26,11 @@ module.exports = class User extends Sequelize.Model {
         paranoid: true, //레코드 삭제시 deleted At컬럼에 시간추가(timestamps 의 영향을 받음)
       }
     );
+  }
+
+  static associate(db) {
+    db.User.hasMany(db.Temp, {
+      foreignKey: { name: 'userId', onDelete: 'SET NULL', as: 'Temp' },
+    });
   }
 };
