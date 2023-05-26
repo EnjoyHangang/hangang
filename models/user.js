@@ -28,9 +28,9 @@ module.exports = class User extends Sequelize.Model {
     );
   }
 
-  // static associate(db) {
-  //   db.User.hasMany(db.Temp, {
-  //     foreignKey: { name: 'userId', onDelete: 'SET NULL', as: 'Temp' },
-  //   });
-  // }
+  static associate(db) {
+    db.User.hasMany(db.Temp, {
+      foreignKey: { name: 'userId', onDelete: 'SET NULL', as: 'Temp' },
+    });
+  }
 };
