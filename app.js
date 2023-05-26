@@ -1,25 +1,48 @@
 const createError = require('http-errors');
 const express = require('express');
+const path = require('path');
 const cookieParser = require('cookie-parser');
-const logger = require('morgan');
+const cors = require('cors');
+const corsConfig = require('./config/corsConfig.json');
+const models = require('./models/index');
+const logger = require('./lib/logger');
+const bodyParser = require('body-parser');
 
 const indexRouter = require('./routes/index');
 
 const app = express();
+logger.info('app start');
+
 app.use(express.static('public'));
 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jsx');
 app.engine('jsx', require('express-react-views').createEngine());
 
-app.get('/', (req, res) => {
-  res.render('index', { name: 'Hangang' });
-});
+models.sequelize
+  .authenticate()
+  .then(() => {
+    logger.info('DB connection success');
 
-app.use(logger('dev'));
+    // sequelize sync (table 생성)
+    models.sequelize
+      .sync()
+      .then(() => {
+        logger.info('Sequelize sync success');
+      })
+      .catch((err) => {
+        logger.error('Sequelize sync error', err);
+      });
+  })
+  .catch((err) => {
+    logger.error('DB Connection fail', err);
+  });
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 app.use('/', indexRouter);
 
@@ -36,7 +59,7 @@ app.use(function (err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  res.render('error', { err: err.status });
 });
 
 module.exports = app;

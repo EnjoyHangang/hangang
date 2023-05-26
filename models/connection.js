@@ -1,7 +1,4 @@
-//db연결 파일
-
 const Sequelize = require("sequelize");
-
 const dotenv = require("dotenv");
 
 dotenv.config();
@@ -15,6 +12,7 @@ const db = {
   dialect: process.env.DB_DIALECT,
 };
 
+// sequelize 생성
 const sequelize = new Sequelize(db.database, db.username, db.password, {
   host: db.host,
   port: db.port,
