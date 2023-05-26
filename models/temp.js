@@ -8,7 +8,7 @@ module.exports = class Temp extends Sequelize.Model {
           type: Sequelize.INTEGER,
         },
         time: {
-          type: Sequelize.DATE,
+          type: Sequelize.TIME,
         },
       },
       {
