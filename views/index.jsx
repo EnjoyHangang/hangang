@@ -1,19 +1,16 @@
 import React from 'react';
+import DefaultLayout from './layouts/default';
 
-const index = ({ name }) => {
+const Index = ({ title }) => {
   return (
-    <html>
-      <head>
-        <meta charSet="UTF-8" />
-        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>{name}</title>
-      </head>
-      <body>
-        <div>{name}</div>
-      </body>
-    </html>
+    <DefaultLayout title={title}>
+      <div>{title}</div>
+      <form>
+        <input type="text" />
+        <button>submit</button>
+      </form>
+    </DefaultLayout>
   );
 };
 
-export default index;
+export default Index;
